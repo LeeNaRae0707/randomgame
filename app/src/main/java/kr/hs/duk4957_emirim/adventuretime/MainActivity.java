@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         try {
             Toast.makeText(this,name+"님의 캐릭터를 불러오는 중입니다...", Toast.LENGTH_LONG).show();
+            Intent intent=new Intent(this, ResultActivity.class);
+            intent.putExtra("name",name);
+            intent.putExtra("age",18);
+            startActivity(intent);
         } catch(NullPointerException e)
         {
             Toast.makeText(this,"이름을 입력해주세요 XD", Toast.LENGTH_LONG).show();

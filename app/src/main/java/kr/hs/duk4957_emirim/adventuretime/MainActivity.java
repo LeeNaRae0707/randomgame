@@ -28,11 +28,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        Toast.makeText(this, "싸워요!", Toast.LENGTH_LONG).show();
+    public void onClick(View v)
+    {
+        String name=mName.getText().toString();
 
-        Intent intent = new Intent(this, ResultActivity.class);
-        startActivity(intent);
+        try {
+            Toast.makeText(this,name+"님의 캐릭터를 불러오는 중입니다...", Toast.LENGTH_LONG).show();
+        } catch(NullPointerException e)
+        {
+            Toast.makeText(this,"이름을 입력해주세요 XD", Toast.LENGTH_LONG).show();
+        }catch(Exception e)
+        {
+            Toast.makeText(this,"에러가 발생한것 같네요!", Toast.LENGTH_LONG).show();
+        }
+
     }
 }
 

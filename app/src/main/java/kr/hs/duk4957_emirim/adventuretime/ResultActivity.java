@@ -77,7 +77,7 @@ public class ResultActivity extends AppCompatActivity {
                 mImageView.setImageResource(R.drawable.icon6); break;
             }
             case 4:
-            {55
+            {55fi
                 mImageView.setImageResource(R.drawable.icon8); break;
             }
             case 5:
